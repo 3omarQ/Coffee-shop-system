@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.escaperoom2.controller.CommandeController">
+   <children>
+      <HBox layoutX="62.0" layoutY="13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="detailLabel" text="Details commande.">
+               <font>
+                  <Font name="Courier New Bold" size="14.0" />
+               </font></Label>
+            <VBox alignment="TOP_CENTER" spacing="10.0">
+               <children>
+                  <Button fx:id="toggleHeightBtn" mnemonicParsing="false" onAction="#toggleHeightBtn" prefHeight="13.0" prefWidth="26.0" text="🔼">
+                     <VBox.margin>
+                        <Insets bottom="-15.0" right="10.0" top="-10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label fx:id="compteurLabel" text="Compteur">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Label>
+                        <VBox>
+                           <children>
+                              <ToggleButton fx:id="pauseBtn" mnemonicParsing="false" onAction="#pauseBtn" text="⏸" />
+                              <ToggleButton fx:id="notifButton" mnemonicParsing="false" onAction="#notifToggle" text="🔔" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="commandOptionsBox" alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="passerButton" mnemonicParsing="false" onAction="#passerBtn" prefHeight="26.0" prefWidth="62.0" text="Passer" />
+                        <Button fx:id="additionButton" mnemonicParsing="false" onAction="#additionBtn" text="Addition" />
+                        <Button fx:id="modifierButton" mnemonicParsing="false" onAction="#modifierBtn" text="Modifier" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

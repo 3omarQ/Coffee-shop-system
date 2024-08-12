@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="card_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="249.0" stylesheets="@cardDesign.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.escaperoom2.controller.ConsumableController">
+   <children>
+      <VBox layoutX="65.0" layoutY="-10.0" prefHeight="126.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="258.0">
+               <children>
+                  <Label fx:id="prod_name" prefHeight="70.0" prefWidth="174.0" text="Spaghetti" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="prod_price" alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="94.0" text="\$0.0">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="250.0" spacing="10.0">
+               <children>
+                  <Button fx:id="prod_addBtn" graphicTextGap="0.0" mnemonicParsing="false" onAction="#addBtn" prefHeight="42.0" prefWidth="174.0" styleClass="btn" stylesheets="@cardDesign.css" text="➕" textAlignment="CENTER">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+                  <Button fx:id="minusButton" mnemonicParsing="false" onAction="#minusBtn" prefHeight="40.0" prefWidth="38.0" style="-fx-background-color: #FFCCCB;" text="➖" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="card" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>
